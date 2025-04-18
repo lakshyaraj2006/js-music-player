@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="player">
+            <img class="coverImg" src="images/logo.png" alt="">
+    
+            <div class="player--controls">
+                <img src="images/previous.svg" class="controlImg" id="prevBtn" alt="">
+                <img src="images/play.svg" class="controlImg" id="playBtn" alt="">
+                <img src="images/repeat.svg" class="controlImg" id="repeatBtn" alt="">
+                <img src="images/next.svg" class="controlImg" id="nextBtn" alt="">
+            </div>
+    
+            <div class="player--songInfo">
+                <h1 class="songName"></h1>
+                
+                <img src="images/playing.gif" class="playing" alt="">
+                <div class="seekbar">
+                    <span class="circle"></span>
+                </div>
+
+                <div class="time-details">
+                    <p id="currentTime">00:00</p>
+                    <p id="duration">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <ul class="songsList"></ul>
+    </div>
+
+    <script src="player.js"></script>
+</body>
+</html>

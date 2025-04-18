@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 64px;
+}
+
+.player {
+    width: 500px;
+    padding: 48px 16px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+.player img.coverImg {
+    width: 180px;
+    display: block;
+    margin: auto;
+}
+
+.player .player--controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 32px;
+}
+
+.player .player--controls img.controlImg {
+    width: 54px;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 999px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.player .player--songInfo {
+    margin-top: 32px;
+}
+
+.player .player--songInfo h1.songName {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.player .player--songInfo img.playing {
+    width: 72px;
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.player .player--songInfo .seekbar {
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    position: relative;
+    padding: 3px;
+}
+
+.player .player--songInfo .seekbar .circle {
+    position: absolute;
+    background-color: dodgerblue;
+    left: 0;
+    top: -3px;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.songsList {
+    width: 500px;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    list-style: none;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+.songsList li.songItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.player .time-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
