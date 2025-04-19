@@ -131,6 +131,7 @@ audio.addEventListener('ended', () => {
     audio.currentTime = 0;
     circle.style.left = '0';
     playBtn.src = 'images/play.svg';
+    playingImg.style.opacity = '0';
 })
 
 const playMusic = () => {
@@ -194,5 +195,22 @@ repeatBtn.addEventListener('click', (e) => {
     } else {
         audio.loop = false;
         e.target.src = 'images/repeat.svg';
+    }
+})
+
+document.addEventListener('contextmenu', (e) => e.preventDefault())
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+        audio.currentTime += 5;
+    }
+    else if (e.key === 'ArrowLeft') {
+        audio.currentTime -= 5;
+    }
+    else if (e.code === 'Space') {
+        playMusic();
+    }
+    else {
+        e.preventDefault();
     }
 })
